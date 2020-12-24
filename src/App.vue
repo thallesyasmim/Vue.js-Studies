@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h1>{{ vuejs }}</h1> <!-- Interpolation -->
+    <Input />
     <!-- {{ 341 + 86 - 62 }}  JavaScript Expressions -->
     <Animation /> 
     <QuadToCircle />
@@ -12,13 +13,15 @@
 import Animation from './components/Animation';
 import QuadToCircle from './components/Circle';
 import Footer from './components/Footer';
+import Input from './components/Input';
 
 export default {
   name: 'App',
   components: {
     Animation,
     QuadToCircle,
-    Footer
+    Footer,
+    Input
   },
   data() { // Component Data
     return { 
