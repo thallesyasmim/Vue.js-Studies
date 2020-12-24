@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <h1>CSS Animation</h1>
+    <h1>{{ vuejs }}</h1> <!-- Interpolation -->
+    <!-- {{ 341 + 86 - 62 }}  JavaScript Expressions -->
     <Animation /> 
     <QuadToCircle />
     <Footer />
@@ -18,6 +19,11 @@ export default {
     Animation,
     QuadToCircle,
     Footer
+  },
+  data() { // Component Data
+    return { 
+      vuejs: 'Vue.js: Reactive Framework'
+    }
   }
 }
 </script>
