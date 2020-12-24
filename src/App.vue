@@ -3,18 +3,21 @@
     <h1>CSS Animation</h1>
     <Animation /> 
     <QuadToCircle />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Animation from './components/Animation';
-import QuadToCircle from './components/Circle'
+import QuadToCircle from './components/Circle';
+import Footer from './components/Footer';
 
 export default {
   name: 'App',
   components: {
     Animation,
-    QuadToCircle
+    QuadToCircle,
+    Footer
   }
 }
 </script>
