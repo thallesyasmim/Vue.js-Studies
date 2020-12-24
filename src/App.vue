@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Animação CSS</h1>
+    <h1>CSS Animation</h1>
     <Animation /> 
     <QuadToCircle />
   </div>
