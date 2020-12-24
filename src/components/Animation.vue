@@ -18,7 +18,7 @@
         margin-top: 5px;
         background-color: #2c3e50;
         border-radius: 5px;
-        box-shadow: 7px 5px 15px rgba(0, 0, 0, 0.20);
+        box-shadow: 7px 5px 15px rgba(0, 0, 0, 0.25);
         animation: move 3s infinite alternate;
         animation-timing-function: ease-in-out;
     }
