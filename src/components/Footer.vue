@@ -1,12 +1,16 @@
 <template>
   <footer>
-      Studies <span>Vue.js</span> By Thalles Gabriel
+      Studies <span>{{ framework }}</span> By {{ author }}
   </footer>
 </template>
 
 <script>
 export default {
-    name: 'Footer'
+    name: 'Footer',
+    props: {
+        framework: String, // Number, Object, Array,
+        author: String
+    }
 }
 </script>
 
