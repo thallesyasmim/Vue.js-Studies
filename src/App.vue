@@ -5,7 +5,7 @@
     <!-- {{ 341 + 86 - 62 }}  JavaScript Expressions -->
     <Animation /> 
     <QuadToCircle />
-    <Footer :framework="framework" :author="author" />
+    <Footer :footer="footer" />
   </div>
 </template>
 
@@ -26,8 +26,10 @@ export default {
   data() { // Component Data
     return { 
       vuejs: 'Vue.js: Reactive Framework',
-      framework: 'Vue.js',
-      author: 'Thalles Gabriel'
+      footer: {
+        framework: 'Vue.js',
+        author: 'Thalles Gabriel'
+      }
     }
   }
 }

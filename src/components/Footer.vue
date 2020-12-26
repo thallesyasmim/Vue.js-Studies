@@ -1,6 +1,6 @@
 <template>
   <footer>
-      Studies <span>{{ framework }}</span> By {{ author }}
+      Studies <span>{{ footer.framework }}</span> By {{ footer.author }}
   </footer>
 </template>
 
@@ -8,8 +8,7 @@
 export default {
     name: 'Footer',
     props: {
-        framework: String, // Number, Object, Array,
-        author: String
+        footer: Object, // String, Number, Object, Array,
     }
 }
 </script>
