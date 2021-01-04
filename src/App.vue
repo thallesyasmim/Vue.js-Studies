@@ -5,7 +5,9 @@
     <!-- {{ 341 + 86 - 62 }}  JavaScript Expressions -->
     <Animation /> 
     <QuadToCircle />
+    <Footer :directive="directive" />
     <Footer :footer="footer" />
+    <Footer />
   </div>
 </template>
 
@@ -26,6 +28,7 @@ export default {
   data() { // Component Data
     return { 
       vuejs: 'Vue.js: Reactive Framework',
+      directive: "The directive in Vue.js allowed me to appear",
       footer: {
         framework: 'Vue.js',
         author: 'Thalles Gabriel'
