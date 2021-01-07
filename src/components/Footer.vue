@@ -12,12 +12,20 @@
         <footer v-show="!footer && !directive">
             <span>v-show</span> keeps the element on a page with "display: none;" 
         </footer>
+        <footer v-show="!footer && !directive" :class="{'conditional-class': conditionalClass, '': !conditionalClass }">
+            Using Conditional Class
+        </footer>
     </div>
 </template>
 
 <script>
 export default {
     name: 'Footer',
+    data() {
+        return {
+            conditionalClass: true
+        }
+    },
     props: {
         footer: Object, // String, Number, Object, Array,
         directive: String
@@ -41,4 +49,9 @@ export default {
     #one {
         margin-top: 40px;
     }
-</style>>
+
+    .conditional-class {
+        color: #18222c;
+        background-color: #2c3e50;
+    }
+</style>
