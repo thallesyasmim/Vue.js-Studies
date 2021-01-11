@@ -1,8 +1,8 @@
 <template>
     <article>
-        <section v-for="circle in circles" :key="circle.id">
-            <div></div>
-            <div id="circle"></div>
+        <section v-for="(circle, index) in circles" :key="circle.id">
+            <div>{{ index }}</div>
+            <div id="circle">{{ circle.fruit }}</div>
         </section>
     </article>
 </template>
