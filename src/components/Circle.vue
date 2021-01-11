@@ -1,13 +1,23 @@
 <template>
-  <section>
-      <div></div>
-      <div id="circle"></div>
-  </section>
+    <article>
+        <section v-for="circle in circles" :key="circle.id">
+            <div></div>
+            <div id="circle"></div>
+        </section>
+    </article>
 </template>
 
 <script>
 export default {
-    name: 'QuadToCircle'
+    name: 'QuadToCircle',
+    data() {
+        return {
+            circles: [
+                { id: 1, fruit: "Banana" }, 
+                { id: 2, fruit: "Orange" }, 
+            ]
+        }
+    }
 }
 </script>
 
