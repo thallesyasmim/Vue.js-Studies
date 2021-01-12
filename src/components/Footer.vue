@@ -15,6 +15,7 @@
         <footer v-show="!footer && !directive" :class="{'conditional-class': conditionalClass, '': !conditionalClass }">
             Using Conditional Class
         </footer>
+        <button @click="" v-show="!footer && !directive">Change Class!</button>
     </div>
 </template>
 
@@ -54,4 +55,23 @@ export default {
         color: #18222c;
         background-color: #2c3e50;
     }
+
+    button {
+        padding: 20px;
+        background-color: #2c3e50;
+        border: none;   
+        border-radius: 4px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+        color: #FFF;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: all 300ms;
+    }
+
+    button:hover {
+        background-color: #FFF;
+        color: #2c3e50;
+    }
+
 </style>
