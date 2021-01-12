@@ -15,7 +15,7 @@
         <footer v-show="!footer && !directive" :class="{'conditional-class': conditionalClass, '': !conditionalClass }">
             Using Conditional Class
         </footer>
-        <button @click="" v-show="!footer && !directive">Change Class!</button>
+        <button @click="changeClass" v-show="!footer && !directive">Change Class!</button>
     </div>
 </template>
 
@@ -30,6 +30,11 @@ export default {
     props: {
         footer: Object, // String, Number, Object, Array,
         directive: String
+    },
+    methods: {
+        changeClass: () => {
+            alert('Funcionou!')
+        }
     }
 }
 </script>
