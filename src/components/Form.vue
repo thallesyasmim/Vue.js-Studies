@@ -14,7 +14,7 @@
 <style scoped>
     h1 {
         color: #2c3e50;
-        margin-bottom: 10px;
+        margin: 20% 0 10px;
     }
 
     input {
