@@ -4,10 +4,9 @@
             <div>{{ index }}</div>
             <div id="circle">{{ circle.fruit }}</div>
         </section>
-        <form>
-            <h1>Register</h1>
-            <input type="text" placeholder="Add Circle">
-        </form>
+        <h1>Register: {{ inputField }}</h1>
+        <input type="text" placeholder="Add Circles" v-model="inputField">
+        <button @click="addCircle(inputField)">Add</button>
     </article>
 </template>
 
@@ -19,7 +18,22 @@ export default {
             circles: [
                 { id: 1, fruit: "Banana" }, 
                 { id: 2, fruit: "Orange" }, 
-            ]
+            ],
+            inputField: ''
+        }
+    },
+    methods: {
+        addCircle(fruit) {
+            const { id } = this.circles[this.circles.length - 1]
+            const fruits = ["Apple", "Mango"]
+            if(fruit !== '') {
+                fruits.push(fruit)
+            }
+            const data = {
+                id: id + 1,
+                fruit: fruits[Math.floor(Math.random() * fruits.length)]
+            }
+            this.circles.push(data)
         }
     }
 }
@@ -69,4 +83,21 @@ export default {
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
     }
 
+    button {
+        padding: 10px;
+        background-color: #2c3e50;
+        border: none;   
+        border-radius: 4px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+        color: #FFF;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: all 300ms;
+    }
+
+    button:hover {
+        background-color: #FFF;
+        color: #2c3e50;
+    }
 </style>
