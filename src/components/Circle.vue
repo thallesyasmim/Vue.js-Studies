@@ -5,8 +5,8 @@
             <div id="circle">{{ circle.fruit }}</div>
         </section>
         <h1>Register: {{ inputField }}</h1>
-        <input type="text" placeholder="Add Circles" v-model="inputField">
-        <button @click="addCircle(inputField)">Add</button>
+        <input type="text" placeholder="Fruit (Optional)" v-model="inputField">
+        <button @click="addCircle(inputField)">Add Circles</button>
     </article>
 </template>
 
@@ -26,7 +26,7 @@ export default {
         addCircle(fruit) {
             const { id } = this.circles[this.circles.length - 1]
             const fruits = ["Apple", "Mango"]
-            if(fruit !== '') {
+            if(fruit !== '' && fruit !== ' ') {
                 fruits.push(fruit)
             }
             const data = {
