@@ -6,7 +6,8 @@
         </section>
         <h1>Register: {{ inputField }}</h1>
         <input type="text" placeholder="Fruit (Optional)" v-model="inputField">
-        <button @click="addCircle(inputField)">Add Circles</button>
+        <button @click="addCircle(inputField)">Add Circles</button> <br />
+        <button @click="emitEvent">Emit Event!</button>
     </article>
 </template>
 
@@ -34,6 +35,14 @@ export default {
                 fruit: fruits[Math.floor(Math.random() * fruits.length)]
             }
             this.circles.push(data)
+        },
+
+        emitConfirm() {
+            return confirm('Event emitted from the child component to the parent component! Show Fruits?')
+        },
+
+        emitEvent() { // Emitting event in the child component!
+            this.$emit('alertCircles', { component: this }) // this - is the component itself!
         }
     }
 }

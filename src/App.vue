@@ -4,7 +4,7 @@
     <Input />
     <!-- {{ 341 + 86 - 62 }}  JavaScript Expressions -->
     <Animation /> 
-    <QuadToCircle />
+    <QuadToCircle @alertCircles="emitAlert($event)" />
     <Footer :directive="directive" />
     <Footer :footer="footer" />
     <Footer />
@@ -32,6 +32,18 @@ export default {
       footer: {
         framework: 'Vue.js',
         author: 'Thalles Gabriel'
+      }
+    }
+  },
+  methods: {
+    emitAlert($event) {
+      const { circles } = $event.component
+      const showFruits = $event.component.emitConfirm()
+      if(showFruits) {
+        const listFruits = circles.map(value => value.fruit)
+        for (const fruit of listFruits) {
+          alert(fruit)
+        }
       }
     }
   }
