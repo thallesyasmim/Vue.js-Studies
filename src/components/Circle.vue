@@ -2,7 +2,7 @@
     <article>
         <section v-for="(circle, index) in circles" :key="circle.id">
             <div>{{ index }}</div>
-            <div id="circle">{{ circle.fruit }}</div>
+            <div id="circle">{{ circle.fruit | processFruits }}</div>
         </section>
         <h1>Register: {{ inputField }}</h1>
         <input type="text" placeholder="Fruit (Optional)" v-model="inputField">
@@ -43,6 +43,11 @@ export default {
 
         emitEvent() { // Emitting event in the child component!
             this.$emit('alertCircles', { component: this }) // this - is the component itself!
+        }
+    },
+    filters: { // A filter must receive a value and must return something
+        processFruits(value) {
+            return value.toUpperCase()
         }
     }
 }
