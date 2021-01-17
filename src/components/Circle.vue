@@ -8,6 +8,7 @@
         <input type="text" placeholder="Fruit (Optional)" v-model="inputField">
         <button @click="addCircle(inputField)">Add Circles</button> <br />
         <button @click="emitEvent">Emit Event!</button>
+        <p>Computed Properties: {{ learned }}</p>
     </article>
 </template>
 
@@ -20,7 +21,8 @@ export default {
                 { id: 1, fruit: "Banana" }, 
                 { id: 2, fruit: "Orange" }, 
             ],
-            inputField: ''
+            inputField: '',
+            computedProperties: 'Yes!'
         }
     },
     methods: {
@@ -48,6 +50,11 @@ export default {
     filters: { // A filter must receive a value and must return something
         processFruits(value) {
             return value.toUpperCase()
+        }
+    },
+    computed: { //Generates properties dynamically
+        learned() {
+            return this.computedProperties + ' I Learned!'
         }
     }
 }
@@ -82,9 +89,10 @@ export default {
         }
     }
 
-    h1 {
+    h1, p {
         color: #2c3e50;
         margin: 20% 0 10px;
+        font-weight: 700;
     }
 
     input {
