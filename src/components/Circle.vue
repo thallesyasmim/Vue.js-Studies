@@ -1,6 +1,6 @@
 <template>
     <article>
-        <section v-for="(circle, index) in circles" :key="circle.id">
+        <section v-for="(circle, index) in orderCircles" :key="circle.id">
             <div>{{ index }}</div>
             <div id="circle">{{ circle.fruit | processFruits }}</div>
         </section>
@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import _ from 'lodash'
+
 export default {
     name: 'QuadToCircle',
     data() {
@@ -55,6 +57,10 @@ export default {
     computed: { //Generates properties dynamically
         learned() {
             return this.computedProperties + ' I Learned!'
+        },
+
+        orderCircles() {
+            return _.orderBy(this.circles, ['fruit'], ['asc'])
         }
     }
 }
