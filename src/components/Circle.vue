@@ -7,7 +7,7 @@
         <h1>Register: {{ inputField }}</h1>
         <input type="text" placeholder="Fruit (Optional)" v-model="inputField">
         <button @click="addCircle(inputField)">Add Circles</button> <br />
-        <button @click="emitEvent">Emit Event!</button>
+        <button @click="emitEvent" class="button is-link">Emit Event</button>
         <p>Computed Properties: {{ learned }}</p>
     </article>
 </template>
