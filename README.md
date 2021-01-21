@@ -1,4 +1,4 @@
-Vue.js Studies
+## Vue.js Studies 💻
 
 <h2>📱 Minhas redes sociais:</h2>
 
